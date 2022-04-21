@@ -1,0 +1,31 @@
+.CButton{
+ appearance: none;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin:5px
+}
+
+.CButton:active {
+    box-shadow: 2px 2px 1px #cbd6ee;
+}
+
+.CButton:disabled {
+    background: #ccc;
+    color: #000;
+    cursor: not-allowed;
+}
+
+.CButton:focus {
+  outline: none;
+}
+
+.CButton.primary{
+  background: #4676D7;
+}
+
+.CButton.success{
+    background: #00bb08;
+}

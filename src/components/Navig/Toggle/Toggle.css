@@ -1,0 +1,63 @@
+
+#toggle_checkbox {
+    display: none;
+}
+
+.lab {
+    position: fixed;
+    top:40px;
+    left: 40px;
+    display: block;
+    width: 80px;
+    height: 40px;
+    transform: translateY(-50%);
+    transition: opacity,left .44s ease-in;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.lab:before {
+    top: 8px;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    border: 3px solid red;
+}
+
+.lab:after {
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 40px;
+    border: 3px solid #ffffff;
+}
+
+.lab:before,
+.lab:after {
+    content: "";
+    position: absolute;
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition: 0.5s ease top, 0.5s ease left, 0.5s ease right, 0.5s ease width,
+    0.5s ease height, 0.5s ease border-color;
+}
+
+#toggle_checkbox:checked + .lab:before {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    border-color: #ffffff;
+}
+
+#toggle_checkbox:checked + .lab:after {
+    top: 8px;
+    right: 8px;
+    width: 25px;
+    height: 25px;
+    border-color: red;
+}
+
+.lab.open{
+ left: 350px;
+}
