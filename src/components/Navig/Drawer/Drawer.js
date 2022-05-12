@@ -1,18 +1,20 @@
 import React from "react";
 import './Drawer.css'
 import BackBlack from "../BackBlack/BackBlack";
+import {NavLink} from "react-router-dom";
 
-const links = [1,2,3]
+const links = [{to:'/', exact: true, label: "Список тестов"},
+    {to:'/auth', label: "Аутентификация", exact: false},
+    {to:'quiz-creator', label:"Редактор теста", exact: false}
+]
 class Drawer extends React.Component{
-    // constructor(props) {
-    //     super(props);
-    // }
-
     renderLinks(){
         return(links.map((obj,i)=>{
                 return(
                     <li key={i}>
-                      <a>Link  {obj}</a>
+                      <NavLink to={obj.to} exact={obj.exact} onClick={this.props.onClick}>
+                          {obj.label}
+                      </NavLink>
                     </li>
                 )
             })

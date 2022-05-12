@@ -3,7 +3,7 @@ import './AList.css'
 import Aitem from "./Aitem/Aitem";
 
 function AnswerList(props){
-    return <ul className='Alsit'>
+    return <ul className='Alist'>
         {props.ans.map((ans, i )=>{
             return (<Aitem ans={ans} key={i} onAnswerClick = {props.onAnswerClick}
             ansState={props.ansState ? props.ansState[ans.id] : null}

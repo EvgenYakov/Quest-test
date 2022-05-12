@@ -12,7 +12,7 @@ function Toggle(props){
 
     return(
         <div>
-            <input type="checkbox" id="toggle_checkbox"/>
+            <input type="checkbox" id="toggle_checkbox" />
                 <label htmlFor="toggle_checkbox" className={cls.join(' ')} onClick={props.onClick}>
 
                 </label>

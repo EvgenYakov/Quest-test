@@ -92,8 +92,9 @@ class Quiz extends React.Component {
         },1000)
         } else {
             results[question.id] = 'error';
-            this.setState({ansState: {[answerId]:'error '}, results});
+            this.setState({ansState: {[answerId]:'error'}, results});
         }
+        console.log(this.state.ansState)
     }
 
     checkEnd(){
